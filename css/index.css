@@ -14,7 +14,7 @@
 }
 /* Define a cor vermelha como uma variável CSS chamada --primary. */
 
-h1, h4, h2, .subtitle{
+h1, h4, h2{
     font-family:'titulo';
 }
 body {
@@ -334,6 +334,7 @@ bottom: 1rem;
     width: 20%;
     height: 80px;
     background: #ff0000;
+    color: #fff;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
