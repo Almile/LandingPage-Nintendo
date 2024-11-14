@@ -1,0 +1,212 @@
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login, .search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Menu e itens ocultos em mobile */
+.nav, .login, .search {
+    display: none;
+}
+
+/* Ícone hamburguer para mobile */
+.icon #menuIcon {
+    display: block;
+    color: white;
+    font-size: 48px;
+    cursor: pointer;
+}
+.left{
+    z-index: 2;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+.left p{
+text-shadow: none;
+}
+/* Estilos para telas maiores */
+@media (min-width: 1024px) {
+    .nav, .login, .search {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .icon {
+        display: none;
+    }
+}
+
+/* Menu aberto no mobile */
+.nav.show {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(20px);
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 10rem 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+/* Estilos para login e busca no menu responsivo */
+.nav.show .login, .nav.show .search, .nav.show input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    gap: 1rem;
+}
+
+
+
+/* Exibe o menu hambúrguer e oculta o menu de navegação em telas menores */
+@media (max-width: 1024px) {
+    .nav, .login, .search {
+        display: none;
+    }
+    .banner {
+        flex-direction: column;
+    }
+    .left, .right {
+        margin-top: 12vh ;
+        width: 100%;
+    }
+    .swiper .swiper-wrapper .swiper-slide .banner .right {
+        max-width: 80vw;
+        gap: 10vw;
+    }
+    
+    .links{
+        margin-bottom: 20vh;
+    }
+
+    .nav.show .login button, 
+    .nav.show input {
+        width: 100%;
+    }
+        
+    .swiper .swiper-wrapper .swiper-slide .banner .left {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next{
+        top: 40%;
+        left: auto;
+        margin:0 1rem;
+
+    }
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        top: 5rem;
+        left: 70%;
+        height: 50%;
+    }
+
+    .swiper {
+        width: 100%;
+        min-height: 100vh;
+        overflow-y: visible !important;
+    }
+
+    .nav.show .login, .nav.show .search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .icon {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .description-title, .subtitle, .purchase-info, .pokemon-title, .trailer h2 {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+    .nav, .login, .search {
+        display: none;
+    }
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        left: 50%;
+    }
+    .nav.show .login, .nav.show .search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        position: relative;
+    }
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next{
+        top: 50%;
+        left: auto;
+        margin:0 .1rem;
+        opacity: .5;
+        position: fixed;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+    .left, .right {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        gap: 1rem;
+        margin: 10vh 0 10px;
+    }
+    .features, .links, .description, .trailer {
+        text-align: left;
+        padding: 0.5rem;
+        margin: 10px;
+    }
+
+    .swiper {
+        width: 100%;
+        min-height: 100vh;
+        overflow-y: visible !important;
+    }
+
+    .banner .left .features {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+}
