@@ -4,17 +4,23 @@
     box-sizing: border-box;
 }
 /* Remove a margem e o preenchimento padrão de todos os elementos e define o modelo de box-sizing como border-box. */
+@font-face {
+    font-family:'titulo';
+    src: url('../fonts/burbankbigcondensed_black.otf') format('opentype');
+}
 
 :root {
     --primary: #ff0000;
 }
 /* Define a cor vermelha como uma variável CSS chamada --primary. */
 
-
+h1, h4, h2, .subtitle{
+    font-family:'titulo';
+}
 body {
     position: relative;
     background-color: #000000;
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -325,7 +331,6 @@ bottom: 1rem;
     display: flex;
     font-size: 2em;
     font-weight: 400;
-    color: white;
     width: 20%;
     height: 80px;
     background: #ff0000;
@@ -344,7 +349,6 @@ bottom: 1rem;
 /* O conteúdo de recursos tem uma margem à esquerda de 20px e é exibido em uma coluna flexível. */
 
 .banner .left .features .pricing {
-    color: #ffffff;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -352,7 +356,6 @@ bottom: 1rem;
 /* A seção de preços é exibida com texto branco e layout flexível para alinhamento horizontal. */
 
 .banner .left .features .content h4 {
-    color: #ffffff;
     font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 2px;

@@ -35,12 +35,15 @@
     font-size: 48px;
     cursor: pointer;
 }
-.left{
+.left, .right{
     z-index: 2;
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    font-weight: 800;
+    color: aliceblue;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000;
 }
 
-.left p{
+.left p, h4{
 text-shadow: none;
 }
 /* Estilos para telas maiores */
